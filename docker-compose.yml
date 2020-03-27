@@ -1,0 +1,12 @@
+version: '2'
+services:
+  gotwo:
+    restart: "no"
+    build: .
+    ports:
+      - 8082:8082/tcp
+    networks:
+      - poc-docker-go-1_netone
+networks:
+  poc-docker-go-1_netone:
+    external: true
